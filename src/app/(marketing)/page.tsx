@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="pt-30 px-4 flex flex-col items-center justify-center space-y-3 text-center">
-      <h1 className="font-semibold text-2xl sm:text-3xl md:text-5xl w-full sm:max-w-3xl">
+      <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl w-full sm:max-w-3xl">
         Power Your Projects with Smart{" "}
         <span className="text-red-500">Task</span> Management
       </h1>

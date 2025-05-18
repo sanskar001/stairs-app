@@ -20,13 +20,13 @@ const Navbar: FC = () => {
       </Link>
 
       <div className="flex items-center gap-1">
-        <Button variant="ghost" asChild>
+        <Button variant="link" asChild>
           <Link href="/pricing">Pricing</Link>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button variant="link" asChild>
           <Link href="/about">About</Link>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button variant="link" asChild>
           <Link href="/sign-in">Playground</Link>
         </Button>
       </div>
