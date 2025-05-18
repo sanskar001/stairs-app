@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { Button } from "./ui/button";
+import NavLink from "./NavLink";
 
 const Navbar: FC = () => {
   return (
@@ -20,15 +21,9 @@ const Navbar: FC = () => {
       </Link>
 
       <div className="flex items-center gap-1">
-        <Button variant="link" asChild>
-          <Link href="/pricing">Pricing</Link>
-        </Button>
-        <Button variant="link" asChild>
-          <Link href="/about">About</Link>
-        </Button>
-        <Button variant="link" asChild>
-          <Link href="/sign-in">Playground</Link>
-        </Button>
+        <NavLink href="/pricing">Pricing</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/sign-in">Playground</NavLink>
       </div>
 
       <div className="hidden sm:block">
