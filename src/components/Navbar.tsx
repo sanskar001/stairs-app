@@ -26,7 +26,7 @@ const Navbar: FC = () => {
         <NavLink href="/sign-in">Playground</NavLink>
       </div>
 
-      <div className="hidden sm:block">
+      <div className="hidden md:block">
         <Button asChild>
           <Link href="/sign-in">Login</Link>
         </Button>
