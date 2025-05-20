@@ -15,9 +15,10 @@ import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import Link from "next/link";
 
-const SignInPage = () => {
+const SignUpPage = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
 
   const loginHandle = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,9 +31,11 @@ const SignInPage = () => {
   return (
     <Card className="border-0 outline-0 shadow-none">
       <CardHeader>
-        <CardTitle className="text-2xl text-center">Welcome Back</CardTitle>
+        <CardTitle className="text-2xl text-center">
+          Create Your Account
+        </CardTitle>
         <CardDescription className="text-center">
-          Log in to manage your projects, track tasks, and stay productive.
+          Join Stairs and start organizing your work in minutes.
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col items-center space-y-4">
@@ -58,6 +61,16 @@ const SignInPage = () => {
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
+            }}
+          />
+          <Input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            required
+            value={confirmPassword}
+            onChange={(e) => {
+              setConfirmPassword(e.target.value);
             }}
           />
           <Button type="submit" size="lg" className="w-full">
@@ -96,9 +109,9 @@ const SignInPage = () => {
       </CardContent>
       <CardFooter>
         <div className="w-full text-xs text-center">
-          Don't have account?{" "}
-          <Link href="/sign-up" className="text-red-600">
-            Sign Up
+          Already have accoount?{" "}
+          <Link href="/sign-in" className="text-red-600">
+            Sign In
           </Link>
         </div>
       </CardFooter>
@@ -106,4 +119,4 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default SignUpPage;
