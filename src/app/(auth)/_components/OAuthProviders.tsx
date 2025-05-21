@@ -3,12 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { loginWithGithub, loginWithGoogle } from "../_actions";
 
 const OAuthProviders = () => {
-  const loginWithGoogle = async () => {};
-
-  const loginWithGithub = async () => {};
-
   return (
     <>
       <Button
